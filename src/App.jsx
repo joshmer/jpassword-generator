@@ -3,8 +3,8 @@ import toast, { Toaster } from 'react-hot-toast';
 import {
   ClipboardDocumentIcon,
   ClipboardDocumentCheckIcon,
-  CheckIcon,
-  XMarkIcon,
+  CheckCircleIcon,
+  XCircleIcon,
 } from '@heroicons/react/24/solid';
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
     setCopied(true);
 
     toast('Password copied!', {
-      icon: <CheckIcon className="h-4 w-4" />,
+      icon: <CheckCircleIcon className="h-4 w-4" />,
     });
 
     setTimeout(() => setCopied(false), 1000);
@@ -61,11 +61,11 @@ function App() {
 
       setPassword(generatedPassword);
       toast('Password generated successfully!', {
-        icon: <CheckIcon className="h-4 w-4" />,
+        icon: <CheckCircleIcon className="h-4 w-4" />,
       });
     } else {
       toast('You must select atleast one option!', {
-        icon: <XMarkIcon className="h-4 w-4" />,
+        icon: <XCircleIcon className="h-4 w-4" />,
       });
     }
   };
